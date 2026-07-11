@@ -30,7 +30,7 @@ export default function DashboardView({ currentPlan, setCurrentPlan }) {
 
   const handleSaveChangesDB = async () => {
     try {
-      const res = await axios.put(`https://ai-nutrition-backend-007a.onrender.com/plans/${currentPlan._id}`, currentPlan);
+      const res = await axios.put(`https://ai-nutrition-backend-007a.onrender.com/api/plans/${currentPlan._id}`, currentPlan);
       alert("Changes saved to local JSON database successfully!");
       setCurrentPlan(res.data);
     } catch (err) {

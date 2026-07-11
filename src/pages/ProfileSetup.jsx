@@ -10,7 +10,7 @@ export default function ProfileSetup({ onPlanGenerated }) {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post('https://ai-nutrition-backend-007a.onrender.com/plans/generate', profile);
+      const res = await axios.post('https://ai-nutrition-backend-007a.onrender.com/api/plans/generate', profile);
       onPlanGenerated(res.data);
     } catch (err) {
       alert("Error generating the plan.");
